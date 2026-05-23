@@ -1,0 +1,48 @@
+
+#### Cambio de nombre de la app ####
+####################################
+ruta:
+android/app/src/main/AndroidManifest.xml
+formato:
+android:label="Mi App"
+
+
+
+#### Cambio de imagen de inicio ####
+####################################
+1.- pubspec.yaml-
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.4
+
+flutter_icons:
+  image_path: "assets/images/logo.png"
+  android: true
+  ios: true
+
+2.- agregar png a la carpeta assets/images/
+
+3.- ejecutar en bash:
+flutter pub get
+dart run flutter_launcher_icons
+
+4.- limpiar y ejecutar
+flutter clean
+flutter run
+
+### Copiar y pegar/revisa ruta ###
+##################################
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+flutter_icons:
+  image_path: "assets/images/logo.png"
+  android: true
+  ios: true
+  windows:
+    generate: true
+    image_path: "assets/images/logo.ico"
+dependency_overrides:
+  vector_math: ^2.2.0

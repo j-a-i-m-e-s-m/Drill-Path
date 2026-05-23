@@ -1,0 +1,75 @@
+import 'package:fluent_ui/fluent_ui.dart';
+import 'package:trayectoria_gui/screens/pmr.dart';
+import 'package:trayectoria_gui/screens/sgn.dart';
+
+class NavePant extends StatefulWidget {
+  const NavePant({Key? key}) : super(key: key);
+
+  @override
+  State<NavePant> createState() => _NavePantState();
+}
+
+class _NavePantState extends State<NavePant> {
+  int _currentIndex = 0;
+  bool isDarkMode = false; // Controla el estado del tema
+
+  @override
+  Widget build(BuildContext context) {
+    return FluentApp(
+      title: 'Fluent UI Demo',
+      theme: FluentThemeData(
+        brightness: isDarkMode ? Brightness.dark : Brightness.light,
+        accentColor: Colors.blue, // Personaliza tu color de acento
+      ),
+      home: NavigationView(
+        appBar: const NavigationAppBar(
+          leading: Center(
+            child: FlutterLogo(size: 25),
+          ),
+        ),
+        pane: NavigationPane(
+          header: Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: [
+                DefaultTextStyle(
+                  style: FluentTheme.of(context).typography.title!,
+                  child: const Text('Trayectoriapp'),
+                ),
+                const SizedBox(width: 10), // Espacio entre el título y el ToggleSwitch
+                ToggleSwitch(
+                //content: const Text('Modo oscuro'),// se pasa d pixeles en el margen derecho, se comento para poner un icono de odo obscuro 
+                  checked: isDarkMode,
+                  onChanged: (value) {
+                    setState(() {
+                      isDarkMode = value;
+                    });
+                  },
+                ),
+              ],
+            ),
+          ),
+          selected: _currentIndex, // Controla la pestaña seleccionada
+          displayMode: PaneDisplayMode.auto,
+          onChanged: (index) {
+            setState(() {
+              _currentIndex = index; // Cambia la pestaña activa
+            });
+          },
+          items: [
+            PaneItem(
+              icon: const Icon(FluentIcons.a_t_p_logo),
+              title: const Text('Gráficos de la Trayectoria'),
+              body: const Pantalla1(), // Vincula el contenido de Pantalla1
+            ),
+            PaneItem(
+              icon: const Icon(FluentIcons.view_list),
+              title: const Text('Registro de Trayectoria'),
+              body: const Pantalla2(), // Vincula el contenido de Pantalla2
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
