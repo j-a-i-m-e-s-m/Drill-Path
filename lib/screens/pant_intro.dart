@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    var d = const Duration(seconds: 2);//aqui se establece el tiempo de proyeccion 
+    var d = const Duration(seconds: 3);//aqui se establece el tiempo de proyeccion 
     Future.delayed(d, () {
       if (!mounted) return;
       Navigator.pushAndRemoveUntil(
