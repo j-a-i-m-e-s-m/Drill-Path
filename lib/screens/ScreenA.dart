@@ -18,7 +18,7 @@ class _MyPdfViewerState extends State<MyPdfViewer> {
           title: const Text("Manual de usuario"),
         ),
         body:          
-        SfPdfViewer.asset("assets/images/manual_vf.pdf"),
+        SfPdfViewer.asset("assets/images/manual_vf2.pdf"),
         );
   }
 }

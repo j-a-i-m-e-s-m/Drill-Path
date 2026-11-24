@@ -175,6 +175,8 @@
 //   }
 // }
 ///////////////////////////////////////////////////////////
+library;
+
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:trayectoria_gui/const/const.dart';
@@ -240,7 +242,8 @@ class DogLeg extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.5),
+                  //color: Colors.grey.withOpacity(0.5),
+                  color: Colors.grey.withValues(alpha:0.5),
                   spreadRadius: 2,
                   blurRadius: 5,
                   offset: const Offset(0, 3),

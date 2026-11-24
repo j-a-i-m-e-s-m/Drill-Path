@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:trayectoria_gui/const/const.dart';
+//import 'package:trayectoria_gui/const/const.dart';
 import 'package:trayectoria_gui/screens/main_screen.dart';
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key});
+  //const SplashScreen({super.key, Key? key});
+  const SplashScreen({super.key});
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -14,6 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     var d = const Duration(seconds: 2);//aqui se establece el tiempo de proyeccion 
     Future.delayed(d, () {
+      if (!mounted) return;
       Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) =>  MainScreen()),

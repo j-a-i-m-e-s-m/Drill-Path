@@ -1,8 +1,8 @@
-import 'package:trayectoria_gui/Widgets/summary_widget.dart';
-import 'package:trayectoria_gui/charts/Dashboard.dart';
+//import 'package:trayectoria_gui/Widgets/summary_widget.dart';
+//import 'package:trayectoria_gui/charts/Dashboard.dart';
 import 'package:flutter/material.dart';
-import 'package:trayectoria_gui/Widgets/side_menu_widget.dart';
-import 'package:trayectoria_gui/util/responsive.dart';
+//import 'package:trayectoria_gui/Widgets/side_menu_widget.dart';
+//import 'package:trayectoria_gui/util/responsive.dart';
 import 'package:trayectoria_gui/util/trajectory_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:trayectoria_gui/screens/graficos.dart';

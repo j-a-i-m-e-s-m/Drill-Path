@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:trayectoria_gui/util/trajectory_provider.dart'; // Ajusta la ruta
 import 'package:trayectoria_gui/Widgets/header_widget.dart';
-import 'package:trayectoria_gui/Widgets/side_menu_widget.dart';
-import 'package:trayectoria_gui/Widgets/summary_widget.dart';
-import 'package:trayectoria_gui/util/responsive.dart';
+//import 'package:trayectoria_gui/Widgets/side_menu_widget.dart';
+//import 'package:trayectoria_gui/Widgets/summary_widget.dart';
+//import 'package:trayectoria_gui/util/responsive.dart';
 import 'package:trayectoria_gui/const/const.dart';
 
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:trayectoria_gui/util/trajectory_provider.dart';
-import 'package:trayectoria_gui/Widgets/header_widget.dart';
-import 'package:trayectoria_gui/util/responsive.dart';
-import 'package:trayectoria_gui/const/const.dart';
+//import 'package:flutter/material.dart';
+//import 'package:provider/provider.dart';
+//import 'package:trayectoria_gui/util/trajectory_provider.dart';
+//import 'package:trayectoria_gui/Widgets/header_widget.dart';
+//import 'package:trayectoria_gui/util/responsive.dart';
+//import 'package:trayectoria_gui/const/const.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // class ImgPrincContent extends StatelessWidget {
@@ -91,12 +91,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 //////////////////widget de la imagen, el de arriba es el bueno 
 
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:trayectoria_gui/util/trajectory_provider.dart';
-import 'package:trayectoria_gui/Widgets/header_widget.dart';
-import 'package:trayectoria_gui/const/const.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+// import 'package:flutter/material.dart';
+// import 'package:provider/provider.dart';
+// import 'package:trayectoria_gui/util/trajectory_provider.dart';
+// import 'package:trayectoria_gui/Widgets/header_widget.dart';
+// import 'package:trayectoria_gui/const/const.dart';
+// import 'package:flutter_svg/flutter_svg.dart';
 
 class ImgPrincContent extends StatelessWidget {
   final TrajectoryProvider? provider;

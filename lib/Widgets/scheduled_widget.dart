@@ -902,6 +902,7 @@ class _ScheduledState extends State<Scheduled> {
                     : () async {
                         setState(() => isLoading = true);
                         bool success = await _processData();
+                        if (!context.mounted) return; //seagrego
                         setState(() => isLoading = false);
                         if (success) {
                           Navigator.push(

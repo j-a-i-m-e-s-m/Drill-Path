@@ -1,10 +1,10 @@
-import 'package:trayectoria_gui/const/const.dart';
-import 'package:trayectoria_gui/Widgets/pie_chart_widget.dart';
+// import 'package:trayectoria_gui/const/const.dart';
+// import 'package:trayectoria_gui/Widgets/pie_chart_widget.dart';
 import 'package:trayectoria_gui/Widgets/scheduled_widget.dart';
-import 'package:trayectoria_gui/Widgets/summary_details.dart';
+//import 'package:trayectoria_gui/Widgets/summary_details.dart';
 import 'package:flutter/material.dart';
-import 'package:trayectoria_gui/util/trajectory_provider.dart';
-import 'package:provider/provider.dart';
+//import 'package:trayectoria_gui/util/trajectory_provider.dart';
+//import 'package:provider/provider.dart';
 
 // class SummaryWidget extends StatelessWidget {
 //   const SummaryWidget({super.key});

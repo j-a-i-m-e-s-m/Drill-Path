@@ -30,8 +30,10 @@ class TrajectoryProvider with ChangeNotifier {
   List<FlSpot> get vistHorData => _vistHorData;
   List<Map<String, dynamic>> get tableData => _tableData;
   String get tipoPozo => _tipoPozo;
-  List<dynamic> get Az => _Az ?? [];
-  List<dynamic> get inc => _inc ?? [];
+  // List<dynamic> get Az => _Az ?? [];
+  // List<dynamic> get inc => _inc ?? [];
+  List<dynamic> get Az => _Az;
+  List<dynamic> get inc => _inc;
   dynamic get Pvfci => _Pvfci;
   dynamic get Dhfci => _Dhfci;
   dynamic get Larca => _Larca;

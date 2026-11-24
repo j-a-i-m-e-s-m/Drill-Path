@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:trayectoria_gui/const/const.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+//import 'package:flutter_svg/flutter_svg.dart';
 
 // class SideMenuWidget extends StatefulWidget {
 //   const SideMenuWidget({super.key});
@@ -264,16 +264,27 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
     
   ];
 
+  // Future<void> _launchUrl(String url) async {
+  //   final Uri uri = Uri.parse(url);
+  //   if (await canLaunchUrl(uri)) {
+  //     await launchUrl(uri, mode: LaunchMode.externalApplication);
+  //   } else {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(content: Text('No se pudo abrir $url')),
+  //     );
+  //   }
+  // }
   Future<void> _launchUrl(String url) async {
-    final Uri uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('No se pudo abrir $url')),
-      );
-    }
+  final messenger = ScaffoldMessenger.of(context);
+  final Uri uri = Uri.parse(url);
+  if (await canLaunchUrl(uri)) {
+    await launchUrl(uri, mode: LaunchMode.externalApplication);
+  } else {
+    messenger.showSnackBar(
+      SnackBar(content: Text('No se pudo abrir $url')),
+    );
   }
+}
 
   @override
   Widget build(BuildContext context) {

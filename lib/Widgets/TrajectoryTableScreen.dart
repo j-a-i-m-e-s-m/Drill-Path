@@ -215,24 +215,7 @@ class TrajectoryTableScreen extends StatelessWidget {
 
     return Consumer<TrajectoryProvider>(
       builder: (context, provider, child) {
-        if (provider == null) {
-          return Scaffold(
-            appBar: AppBar(
-              title: const Text('Parámetros de la trayectoria del pozo'),
-              backgroundColor: cardBackgroundColor,
-            ),
-            body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text('Proveedor no disponible, reinicia la app.', style: TextStyle(color: Colors.white)),
-                  const SizedBox(height: 16.0),
-                ],
-              ),
-            ),
-          );
-        }
-        if (provider.tableData == null || provider.tableData!.isEmpty) {
+        if (provider.tableData.isEmpty) {
           return Scaffold(
             appBar: AppBar(
               title: const Text('Parámetros de la trayectoria del pozo'),
@@ -276,7 +259,8 @@ class TrajectoryTableScreen extends StatelessWidget {
                         child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           controller: scrollController,
-                          child: buildTrajectoryTable(provider.tipoPozo ?? 'j', provider.tableData ?? [], provider),
+                          //child: buildTrajectoryTable(provider.tipoPozo ?? 'j', provider.tableData ?? [], provider),
+                          child: buildTrajectoryTable(provider.tipoPozo, provider.tableData, provider),
                         ),
                       ),
                     ),
@@ -389,7 +373,7 @@ class TrajectoryTableScreen extends StatelessWidget {
     // Usar outputs como etiquetas y buscar valores en tableData
     return DataTable(
     columnSpacing: 100,
-    headingRowColor: MaterialStateProperty.all(const Color.fromARGB(255, 255, 255, 255)),
+    headingRowColor: WidgetStateProperty.all(const Color.fromARGB(255, 255, 255, 255)),
     columns: const [
       DataColumn(label: Text('Parámetro', style: TextStyle(color: Color.fromARGB(255, 36, 35, 35)))),
       DataColumn(label: Text('Valor', style: TextStyle(color: Color.fromARGB(255, 36, 35, 35)))),

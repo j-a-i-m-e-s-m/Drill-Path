@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:trayectoria_gui/const/const.dart';
+//import 'package:trayectoria_gui/const/const.dart';
 import 'package:trayectoria_gui/screens/main_screen.dart';
 import 'package:trayectoria_gui/screens/ScreenA.dart';
 import 'package:trayectoria_gui/screens/ScreenB.dart';
-import 'package:process_run/shell.dart';
+//import 'package:process_run/shell.dart';
 import 'package:trayectoria_gui/screens/pant_graficos.dart';
 import 'package:trayectoria_gui/screens/pant_intro.dart';
 import 'dart:io';
@@ -12,10 +12,10 @@ import 'package:window_manager/window_manager.dart';
 
 
 
-import 'package:flutter/material.dart';
+//import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:window_manager/window_manager.dart'; // Asegúrate de tener esta dependencia
-import 'dart:io';
+//import 'package:window_manager/window_manager.dart'; // Asegúrate de tener esta dependencia
+//import 'dart:io';
 // import 'package:shell/shell.dart'; // Asegúrate de tener esta dependencia
 import 'package:trayectoria_gui/util/trajectory_provider.dart';
 // Importa tus pantallas
@@ -59,14 +59,14 @@ import 'package:trayectoria_gui/Widgets/TrajectoryTableScreen.dart';
 //     } else {
 //       await shell.run
 
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:window_manager/window_manager.dart';
-import 'dart:io';
-import 'package:trayectoria_gui/util/trajectory_provider.dart';
-import 'package:trayectoria_gui/Widgets/TrajectoryTableScreen.dart';
-import 'package:trayectoria_gui/screens/pant_graficos.dart';
-import 'package:trayectoria_gui/screens/pant_intro.dart';
+//import 'package:flutter/material.dart';
+//import 'package:provider/provider.dart';
+//import 'package:window_manager/window_manager.dart';
+//import 'dart:io';
+// import 'package:trayectoria_gui/util/trajectory_provider.dart';
+// import 'package:trayectoria_gui/Widgets/TrajectoryTableScreen.dart';
+// import 'package:trayectoria_gui/screens/pant_graficos.dart';
+// import 'package:trayectoria_gui/screens/pant_intro.dart';
 import 'package:google_fonts/google_fonts.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -91,7 +91,8 @@ class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
-  _MyAppState createState() => _MyAppState();
+  //_MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> with WindowListener {
